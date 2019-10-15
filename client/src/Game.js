@@ -1,7 +1,7 @@
 import React from 'react';
 import CategoryButtons from './CategoryButtons';
 import GameResults from './GameResults';
-const apiUrl = 'http://localhost:3000/';
+const apiUrl = 'http://localhost:3030/';
 
 class Game extends React.Component {
   constructor(props) {

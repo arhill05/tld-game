@@ -4,6 +4,7 @@ const axios = require('axios');
 const domainsUrl =
   'https://www.101domain.com/extension_category_list_service.json';
 const requestBody = require('../resources/domain_categories');
+const fakeDomains = require('../resources/fakedomains.json');
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
@@ -12,8 +13,9 @@ router.get('/', (req, res, next) => {
 
 router.get('/domains', async (req, res, next) => {
   try {
-    const response = await axios.post(domainsUrl, requestBody);
-    const domains = getDomains(response.data.data);
+    //const response = await axios.post(domainsUrl, requestBody);
+    //const domains = getDomains(response.data.data);
+    const domains = fakeDomains;
     res.send(domains);
   } catch (err) {
     res.status(500).send(err.message);
